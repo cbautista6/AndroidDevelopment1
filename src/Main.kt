@@ -1,19 +1,28 @@
 import java.util.Random
 
 fun main(args: Array<String>){
+    var num:Int=0
+    var valid:Boolean=false;
 
-    print("Enter integer from 1-15: ")
-    var num:Int= readLine()!!.toInt()
+    while(!valid){
 
-    while(num !in 1..15){
-        print("Invalid input. Enter integer from 1-15: ")
-        num= readLine()!!.toInt()
+        try{
+            print("Enter integer from 1-15: ")
+            num = readLine()!!.toInt()
+
+            if(num in 1..15){
+                valid=true
+        }
+            else{
+                print("Invalid input. ")
+             }
+        }
+        catch (e:NumberFormatException){
+            print("Invalid input. ")
+
+        }
     }
-
 
     val random = Random()
     println(List(num) {random.nextInt(0..9)})
-
-
-
 }
