@@ -34,9 +34,16 @@ fun main(args: Array<String>){
     /*val sortAscending = arrayInt.sortedArray() <-- easier way of life
     print(Arrays.toString(sortAscending))*/
 
+    //Ascending order
     bubbleSort(arrayInt)
-    print(Arrays.toString(arrayInt))
+    println("Sorted Array: " + Arrays.toString(arrayInt))
 
+    //Mean
+    println("Mean: " + "%.3f".format(mean(arrayInt)))
+
+    //Mode
+
+    //Median
 
 
 }
