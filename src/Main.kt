@@ -1,4 +1,4 @@
-import java.util.Random
+import java.util.*
 
 fun main(args: Array<String>){
     var num:Int=0
@@ -24,5 +24,13 @@ fun main(args: Array<String>){
     }
 
     val random = Random()
-    println(List(num) {random.nextInt(0..9)})
+ //   println(List(num) {random.nextInt(0..9)}) <-- sloth method lol
+
+    var arrayInt=Array<Int>(num){0}
+    for(item in 0..(num-1)){
+        arrayInt[item]=random.nextInt(0..9)
+    }
+    print(Arrays.toString(arrayInt))
+
+
 }
