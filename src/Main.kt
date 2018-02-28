@@ -30,7 +30,13 @@ fun main(args: Array<String>){
     for(item in 0..(num-1)){
         arrayInt[item]=random.nextInt(0..9)
     }
+
+    /*val sortAscending = arrayInt.sortedArray() <-- easier way of life
+    print(Arrays.toString(sortAscending))*/
+
+    bubbleSort(arrayInt)
     print(Arrays.toString(arrayInt))
+
 
 
 }
