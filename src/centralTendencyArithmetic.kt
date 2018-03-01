@@ -1,20 +1,20 @@
 
 fun mean(numbers: Array<Int>):Float{
-    var sum:Double=0.0
-    var num:Int=0
+    var sum = 0.0
+    var num:Int?
     var mean:Float?
 
     for (index in 0..(numbers.size-1)){
-        num=numbers[index]
-        sum=sum+num
+        num = numbers[index]
+        sum += num
     }
     mean=sum.toFloat()/(numbers.size).toFloat()
     return mean
 }
 
 fun mode(numbers: Array<Int>):Int{
-    var maxVal:Int=0
-    var maxCount:Int=0
+    var maxVal = 0
+    var maxCount = 0
 
     for (a in 0 until numbers.size) {
         var count = 0
