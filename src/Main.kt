@@ -38,10 +38,12 @@ fun main(args: Array<String>){
     bubbleSort(arrayInt)
     println("Sorted Array: " + Arrays.toString(arrayInt))
 
+
     //Mean
     println("Mean: " + "%.3f".format(mean(arrayInt)))
 
     //Mode
+    println("Mode: " + mode(arrayInt))
 
     //Median
 
