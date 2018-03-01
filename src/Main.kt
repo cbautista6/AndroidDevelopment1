@@ -46,6 +46,7 @@ fun main(args: Array<String>){
     println("Mode: " + mode(arrayInt))
 
     //Median
+    println("Median: " + median(arrayInt))
 
 
 }

@@ -1,4 +1,3 @@
-import java.util.*
 
 fun mean(numbers: Array<Int>):Float{
     var sum:Double=0.0
@@ -9,13 +8,11 @@ fun mean(numbers: Array<Int>):Float{
         num=numbers[index]
         sum=sum+num
     }
-
     mean=sum.toFloat()/(numbers.size).toFloat()
     return mean
 }
 
 fun mode(numbers: Array<Int>):Int{
-
     var maxVal:Int=0
     var maxCount:Int=0
 
@@ -30,7 +27,16 @@ fun mode(numbers: Array<Int>):Int{
             maxVal = numbers[a]
         }
     }
-
     return maxVal
+}
+
+fun median(numbers: Array<Int>):Double{
+
+    val mid = numbers.size / 2
+    return if (numbers.size % 2 === 1) {
+        numbers[mid].toDouble()
+    } else {
+        (numbers[mid - 1].toDouble() + numbers[mid]) / 2.0
+    }
 
 }
